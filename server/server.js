@@ -30,6 +30,14 @@ db.connect((err) => {
     throw err;
   }
   console.log("데이터베이스 연결 완료");
+  const createTableQuery = `CREATE TABLE IF NOT EXISTS notes (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_note TEXT,
+        ai_note TEXT
+    )`;
+  db.query(createTableQuery, (err, result) => {
+    if (err) throw err;
+  });
 });
 
 app.get("/", (req, res) => {
