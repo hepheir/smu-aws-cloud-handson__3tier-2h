@@ -72,7 +72,7 @@ const Header = () => (
 
 const Showcase = () => (
   <Box bg="brand.700" color="white" py="8" textAlign="center">
-    <Text fontSize="5xl">홍길동</Text>
+    <Text fontSize="5xl">김동주</Text>
     <Text fontSize="2xl">데브옵스 엔지니어링에 대한 열정을 가진 대학생</Text>
   </Box>
 );

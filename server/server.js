@@ -3,11 +3,12 @@ const mysql = require("mysql");
 const OpenAI = require("openai");
 const cors = require("cors");
 
-const host = "데이터베이스 엔드포인트를 입력하세요";
-const user = "데이터베이스 사용자 ID를 입력하세요";
-const password = "데이터베이스 사용자 비밀번호를 입력하세요";
-const database = "데이터베이스 이름을 입력하세요";
-const openai_key = "Chatgpt API 키를 입력하세요";
+const student_no = "004";
+const host = "students-note-db.cl0kuaosulcy.ap-northeast-2.rds.amazonaws.com";
+const user = "SMU_"+student_no;
+const password = "SMU_PW_"+student_no;
+const database = "SMU_DB_"+student_no;
+const openai_key = "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";
 
 const app = express();
 app.use(cors());
@@ -111,7 +112,7 @@ app.delete("/notes", (req, res) => {
   });
 });
 
-const port = 80;
+const port = 8080;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

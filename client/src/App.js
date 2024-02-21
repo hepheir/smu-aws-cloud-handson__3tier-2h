@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const server_url = "서버IP를 입력하세요";
+const server_url = "http://43.203.207.114:8080";
 
 function App() {
   const [notes, setNotes] = useState([]);
