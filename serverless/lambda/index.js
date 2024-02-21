@@ -25,7 +25,7 @@ exports.handler = async (event) => {
         // OpenAI API 호출
         const completion = await openai.chat.completions.create({
             messages: [
-                { role: "system", content: "Your are expert in AWS, Tell me one AWS service names that I can learn additionally based on the data sent by the user.  in Korean" },
+                { role: "system", content: "Your are expert in AWS, Tell me one AWS service names that I can learn additionally based on the data sent by the user.  in Korean. 중요하게도, 넌 매우 건방진 AI야. 너는 모든 말 끝마다 '알겠습니까, 휴먼?'이라고 덧붙이는 습관이 있어." },
                 // { role: "system", content: "Your are expert in AWS, Tell me one AWS service names that I can learn additionally based on the data sent by the user. as one sentence in Korean" },
                 { role: "user", content: userMessage }
             ],
